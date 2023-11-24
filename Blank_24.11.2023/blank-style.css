@@ -1,0 +1,17 @@
+.Lorum Text,p,a,h1,h2,h3,table,li {
+    color: cyan;
+}
+
+img {
+    clip: rect(10px,60px,60px,10px);
+}
+
+
+body {
+    background-image: url(onepiece.gif);
+    background-attachment:fixed;
+    background-position:center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
