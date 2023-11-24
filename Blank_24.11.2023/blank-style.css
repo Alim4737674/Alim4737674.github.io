@@ -2,10 +2,6 @@
     color: cyan;
 }
 
-img {
-    clip: rect(10px,60px,60px,10px);
-}
-
 
 body {
     background-image: url(onepiece.gif);
@@ -18,4 +14,9 @@ body {
 .text-box {
     display: inline block;
     wigth: 200px
+}
+
+
+img {
+    clip: rect(10px,60px,60px,10px);
 }
