@@ -1,0 +1,88 @@
+.Moino {
+    font-size: 15px;
+    position: fixed;
+    right: 10px;
+    top: 12px;
+    text-align: absolute;
+    font-family: 'Luckiest Guy';
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.5;
+    color: #ff8703;
+    margin: 0%;
+    font-size: 170%;
+    letter-spacing: 1px;
+    font-weight: lighter;
+  }
+  
+  .Navibar {
+    font-size: 15px;
+    background-color: gray;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    opacity: 1;
+    height: 60px;
+    z-index: 1000;  /* Increase the z-index of the nav bar to place it over the video */
+  }
+  
+  .Moin {
+    font-family: 'Luckiest Guy';
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.5;
+    position: relative;
+    left: 95px;top: 12px;
+    color: #ff8703;
+    justify-content: space-around;
+    margin: 0%;
+    font-size: 170%;
+    letter-spacing: 1px;
+    font-weight: lighter;
+  }
+  
+  .Td6 {
+    max-width: 6%;
+    position: absolute;
+    left: 0%;top: 1%;
+  }
+  
+  .Damn {
+    left: 650px;top: 60px;
+    position: relative;
+    margin: 0px;
+  }
+  
+  .Kaufen {
+    color: #ff8703;
+    font-family: "bahnschrift";
+    left: 0px;top: 100px;
+    position: relative;
+    margin: 10px;
+  }
+  
+  a:link {
+    text-decoration: none;
+  }
+  
+  h1,p {
+    font-family: "bahnschrift";
+  }
+  
+  .Video {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    min-width: 100%;
+    min-height: 300px;
+    overflow: auto;
+    z-index: 999;
+  }
+  
+#body{
+  min-width: 100%;
+}
