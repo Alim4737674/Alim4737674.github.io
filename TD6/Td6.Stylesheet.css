@@ -208,9 +208,9 @@ button {
   margin: 0%;
   padding: 0%;
   position: absolute;
+  left: 0%;
   top: 105%;
   max-width: 100%;
-  max-height: none;
 } 
 
 .Unteru{
