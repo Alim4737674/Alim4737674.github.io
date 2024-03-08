@@ -17,7 +17,7 @@
   </div>
 
   <script>
-    // Function to move the dog image
+
     function moveDog(direction) {
       const dog = document.getElementById('dog');
       let currentTop = parseInt(dog.style.top);
@@ -25,7 +25,7 @@
 
       switch (direction) {
         case 'up':
-          currentTop -= 10; // Adjust the movement amount here
+          currentTop -= 10;
           break;
         case 'down':
           currentTop += 10;
@@ -38,26 +38,25 @@
           break;
       }
 
-      // Ensure the dog stays within the viewport (optional)
-      currentTop = Math.max(0, currentTop); // Limit top to 0
-      currentLeft = Math.max(0, currentLeft); // Limit left to 0
+
+      currentTop = Math.max(0, currentTop); 
+      currentLeft = Math.max(0, currentLeft);
 
       dog.style.top = currentTop + 'px';
       dog.style.left = currentLeft + 'px';
     }
 
-    // Function to collect the ball
+
     function collectBall() {
       const dog = document.getElementById('dog');
       const ball = document.getElementById('ball');
 
-      // Calculate the distance between the dog and the ball
+
       const distanceX = ball.offsetLeft - dog.offsetLeft;
       const distanceY = ball.offsetTop - dog.offsetTop;
 
-      // Check if the dog is close enough to the ball
+
       if (Math.abs(distanceX) < 50 && Math.abs(distanceY) < 50) {
-        // Hide the ball
         ball.style.display = "none";
       }
     }
