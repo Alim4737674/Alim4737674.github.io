@@ -16,33 +16,7 @@
   </div>
 
   <script>
-    function moveDog(direction) {
-      const dog = document.getElementById('dog');
-      let currentTop = parseInt(dog.style.top);
-      let currentLeft = parseInt(dog.style.left);
 
-      switch (direction) {
-        case 'up':
-          currentTop -= 10;
-          break;
-        case 'down':
-          currentTop += 10;
-          break;
-        case 'right':
-          currentLeft += 10;
-          break;
-        case 'left':
-          currentLeft -= 10;
-          break;
-      }
-
-
-      currentTop = Math.max(0, currentTop);
-      currentLeft = Math.max(0, currentLeft); 
-
-      dog.style.top = currentTop + 'px';
-      dog.style.left = currentLeft + 'px';
-    }
   </script>
 </body>
 </html>
