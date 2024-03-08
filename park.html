@@ -5,14 +5,15 @@
   <title>Dog Park</title>
 </head>
 <body>
-  <img src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/ball.png" id="ball">
+  <img src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/ball.png" id="ball" style="position: absolute; top: 100px; left: 200px;">
   <img src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/Dog.png" id="dog" style="position: absolute; top: 0; left: 0;">
 
   <div>
     <img src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/arr-up.png" class="up" onclick="moveDog('up')">
     <img src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/arr-down.png" class="down" onclick="moveDog('down')">
-    <img src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/arr-right.png" class="right" onclick="moveDog('right')">
-    <img src="https://raw.githubusercontent.com/biblehrer/biblehrer.github.io/main/Bilder/arr-left.png" class="left" onclick="moveDog('left')">
+    <img src="https://raw.githubusercontent.com/biblehrer.github.io/main/Bilder/arr-right.png" class="right" onclick="moveDog('right')">
+    <img src="https://raw.githubusercontent.com/biblehrer.github.io/main/Bilder/arr-left.png" class="left" onclick="moveDog('left')">
+    <img src="https://raw.githubusercontent.com/biblehrer.github.io/main/Bilder/E.png" class="e" onclick="collectBall()">
   </div>
 
   <script>
@@ -22,19 +23,14 @@
       let currentTop = parseInt(dog.style.top);
       let currentLeft = parseInt(dog.style.left);
 
-      switch (direction) {
-        case 'up':
-          currentTop -= 10; // Adjust the movement amount here
-          break;
-        case 'down':
-          currentTop += 10;
-          break;
-        case 'right':
-          currentLeft += 10;
-          break;
-        case 'left':
-          currentLeft -= 10;
-          break;
+      if (direction === 'up') {
+        currentTop -= 10; // Adjust the movement amount here
+      } else if (direction === 'down') {
+        currentTop += 10;
+      } else if (direction === 'right') {
+        currentLeft += 10;
+      } else if (direction === 'left') {
+        currentLeft -= 10;
       }
 
       // Ensure the dog stays within the viewport (optional)
@@ -43,6 +39,22 @@
 
       dog.style.top = currentTop + 'px';
       dog.style.left = currentLeft + 'px';
+    }
+
+    // Function to collect the ball
+    function collectBall() {
+      const dog = document.getElementById('dog');
+      const ball = document.getElementById('ball');
+
+      // Calculate the distance between the dog and the ball
+      const distanceX = ball.offsetLeft - dog.offsetLeft;
+      const distanceY = ball.offsetTop - dog.offsetTop;
+
+      // Check if the dog is close enough to the ball
+      if (Math.abs(distanceX) < 50 && Math.abs(distanceY) < 50) {
+        // Hide the ball
+        ball.style.display = "none";
+      }
     }
   </script>
 </body>
