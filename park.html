@@ -21,6 +21,33 @@
 
 
     <script>
+	// Function to move the dog image
+    function moveDog(direction) {
+      const dog = document.getElementById('dog');
+      let currentTop = parseInt(dog.style.top);
+      let currentLeft = parseInt(dog.style.left);
 
+      switch (direction) {
+        case 'up':
+          currentTop -= 10; // Adjust the movement amount here
+          break;
+        case 'down':
+          currentTop += 10;
+          break;
+        case 'right':
+          currentLeft += 10;
+          break;
+        case 'left':
+          currentLeft -= 10;
+          break;
+      }
+
+      // Ensure the dog stays within the viewport (optional)
+      currentTop = Math.max(0, currentTop); // Limit top to 0
+      currentLeft = Math.max(0, currentLeft); // Limit left to 0
+
+      dog.style.top = currentTop + 'px';
+      dog.style.left = currentLeft + 'px';
+    }
     </script>
 </html>
