@@ -49,5 +49,20 @@
       dog.style.top = currentTop + 'px';
       dog.style.left = currentLeft + 'px';
     }
+
+function collectBall() {
+      const dog = document.getElementById('dog');
+      const ball = document.getElementById('ball');
+
+      // Calculate the distance between the dog and the ball
+      const distanceX = ball.offsetLeft - dog.offsetLeft;
+      const distanceY = ball.offsetTop - dog.offsetTop;
+
+      // Check if the dog is close enough to the ball
+      if (Math.abs(distanceX) < 50 && Math.abs(distanceY) < 50) {
+        // Hide the ball
+        ball.style.display = "none";
+      }
+    }
     </script>
 </html>
